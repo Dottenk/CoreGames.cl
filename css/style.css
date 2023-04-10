@@ -13,11 +13,19 @@ i.fa-solid{
     padding: 20px 10px 0 5px;
 }
 
+i.fa-solid.fa-eye{
+
+    justify-content: center;
+    color: #e8e8e8;
+    padding: 20px 10px 10px 10px;
+}
+
 nav#nav-principal{
 
     display: block;
-    box-shadow: 0px 2px 2px 0px rgba(black, black, black, 0.7);
+    box-shadow: 0 2px 10px 0 rgba(0,0,0, 0.4);
 }
+
 
 img#logo-main{
 
@@ -97,6 +105,7 @@ img#img_item{
 div.carousel-item:hover img#img_item{
     transform: scale(1.2);
     z-index: -1;
+    cursor: pointer;
 }
 
 div.carousel-item img#img_item{
@@ -114,6 +123,7 @@ section#contenido_home{
 div.card{
 
     transition: 0.6s;
+    border: 0;
 }
 div.card:hover{
 
@@ -123,22 +133,85 @@ div.card:hover{
 }
 
 
-div.card:hover div.card-body{
-
-    transform: scale(1.1 , 1.8);
-}
 
 img.card-img-top{
     transition: 0.66s;
     opacity: 1;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0.6;
+    -webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	-ms-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+
 }
+
+.ver_mas {
+	background-color: #1d2024;
+	position: absolute;
+	width: 100%;
+	height: 110px;
+	bottom: 0;
+    left: 0;
+	z-index: 1;
+	opacity: 0;
+	transform: translate(0px, 70px);
+	-webkit-transform: translate(0px, 70px);
+	-moz-transform: translate(0px, 70px);
+	-o-transform: translate(0px, 70px);
+	-ms-transform: translate(0px, 70px);
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.ver_mas span {
+	font-size: 40px;
+	color: #fff;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	top: 13px;
+}
+.ver_mas p {
+	font-size: 40px;
+	color: #fff;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	top: 21px;
+
+}
+
+div.card:hover .ver_mas {
+	transform: translate(0px, 0px);
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	opacity: 1;
+    cursor: pointer;
+}
+
+div.card:hover div.card-body {
+	transform: translate(2px, -100px);
+	-webkit-transform: translate(2px,-100px);
+	-moz-transform: translate(2px, -100px);
+	-o-transform: translate(2px, -100px);
+	-ms-transform: translate(2px, -100px);
+}
+
 
 div.card:hover img.card-img-top{ 
 
     transform: scaleY(0.8);
     transform-origin: top;
     opacity: 0.8;
-    
+    cursor: pointer;
 }
 
 
@@ -146,6 +219,23 @@ div.card-body{
 
     color: #e8e8e8;
     border-radius: 2px;
+    padding: 10%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    -webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+
+}
+
+h4.card-title{
+
+    border-bottom: #fff solid 1px;
+    font-size: medium;
+    padding: 0 0 15px 0;
 }
 
 
@@ -157,6 +247,8 @@ img#img_content_card{
     margin: 10px 25px 10px 5px;
     align-content: center;
     position: absolute;
+    top: 15%;
+    left: 10%;
 }
 
 p.card-text{
@@ -168,6 +260,144 @@ p.card-text{
 div#more_content{
     background-color: #1d2024;
 }
+
+div#main-product-body{
+    position: relative;
+    z-index: 1;
+}
+
+div#bg-product{
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(/img/product/bck-re4r.jpeg) center center;
+    background-size: cover;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.6s;
+
+}
+
+iframe#Ytb{
+    width: 95%;
+    height: 450px;
+}
+
+
+div#main-product-body:hover div#bg-product{
+    opacity: 0.9;
+}
+
+h3#product-tittle{
+    background-color: #131416;
+    opacity: 0.8;
+}
+
+div#main-product-body:hover{
+
+    opacity: 1;
+}
+
+
+div#product-desc{
+
+    background-color: #212529;
+    opacity: 0.8;
+
+}
+
+button#product-button{
+
+    display: block;
+    border: 1px;
+    border-color: #131416;
+    text-align: center;
+    width: 100%;
+}
+
+
+button#product-button i.fa-cart-shopping{
+    padding: 5px;
+}
+
+div#item-discount{
+    background-color: #300205;
+    color: rgb(185, 185, 185);
+    border: #850303 solid 1px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+div#item-discount h4{
+    font-size: 28px;
+
+}
+
+div#item-price p{
+    text-align: center;
+}
+
+
+div#product-reque{
+    background-color: #212529;
+}
+
+ul#dec-reque{
+    font-size: smaller;
+}
+ul#dec-reque p{
+    margin-bottom: 1px;
+    text-align: justify;
+}
+
+
+div#other-prod{
+    background-color: #1d1e20;
+}
+
+div#other-prod div.col-12 h2{
+    padding: 10px 0 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
