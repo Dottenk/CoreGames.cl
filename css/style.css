@@ -274,7 +274,7 @@ div#bg-product{
     bottom: 0;
     left: 0;
     right: 0;
-    background: url(/img/product/bck-re4r.jpeg) center center;
+    background: url(../img/product/bck-re4r.jpeg) center center;
     background-size: cover;
     opacity: .4;
     width: 100%;
